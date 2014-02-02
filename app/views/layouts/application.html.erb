@@ -10,5 +10,12 @@
 
 <%= yield %>
 
+<% if flash[:short_id].present? %>
+	<p class='shortened_link'>
+		The shortened URL is available <%= link_to "here", url_url(flash[:short_id]) %>
+		(Right click and copy link to share it).
+	</p>
+<% end %>
+
 </body>
 </html>

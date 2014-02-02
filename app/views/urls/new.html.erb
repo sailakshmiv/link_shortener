@@ -1,2 +1,18 @@
-<h1>Urls#new</h1>
-<p>Find me in app/views/urls/new.html.erb</p>
+<%= form_for @short_url do |f| %>
+	
+	<p>
+		<%= f.label :url, "Your URL:" %>
+		<%= f.text_field :url %>
+	</p>
+
+	<% if @short_url.errors[:url].any? %>
+		<p class="error_messages">
+			The given URL <%= @short_url.errors[:url].to_sentence %>
+		</p>
+	<% end %>
+
+	<p class="button">
+		<%= f.submit "Shorten my URL" %>
+	</p>
+
+<% end %>
