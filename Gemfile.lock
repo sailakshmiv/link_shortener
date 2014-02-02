@@ -41,7 +41,6 @@ GEM
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
     bson (2.2.0)
-    bson_ext (1.5.1)
     builder (3.1.4)
     capybara (2.2.0)
       mime-types (>= 1.16)
@@ -173,8 +172,6 @@ PLATFORMS
 
 DEPENDENCIES
   better_errors
-  bson
-  bson_ext
   capybara
   coffee-rails (~> 4.0.0)
   cucumber
