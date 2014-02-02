@@ -7,7 +7,7 @@ class UrlsController < ApplicationController
   	@short_url = Url.new(params[:url])
   	if @short_url.save
   		flash[:short_id] = @short_url.id
-  		redirect_to new_url_path
+  		redirect_to new_url_url
   	else
   		render :action => "new"
   	end
